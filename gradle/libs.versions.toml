@@ -1,0 +1,85 @@
+[versions]
+agp = "8.5.2"
+kotlin = "2.0.21"
+####################
+activity = "1.9.3"
+accompanistInsets = "0.22.0-rc"
+annotationJvm = "1.9.1"
+appcompat = "1.7.0"
+coil = "2.6.0"
+composeBom = "2024.08.00"
+composeNavigation = "2.7.7"
+coroutines = "1.9.0"
+flowLayout = "0.32.0"
+gson = "2.10.1"
+hilt = "2.51"
+hiltNavigationCompose = "1.2.0"
+immutableCollections = "0.3.8"
+junit5 = "5.9.3"
+kluent = "1.72"
+ksp = "2.0.21-1.0.25" # change it with kotlin
+ktlint = "0.48.2"
+ktlintPlugin = "11.6.1"
+lifecycle = "2.8.7"
+material3 = "1.2.1"
+mockk = "1.13.10"
+okhttpBom = "4.12.0"
+retrofit = "2.11.0"
+timber = "5.0.1"
+turbine = "1.0.0"
+
+[plugins]
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+androidLibrary = { id = "com.android.library", version.ref = "agp" }
+composeCompiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlinJvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlinParcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+ktlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "ktlintPlugin" }
+
+[libraries]
+accompanistInsets = { module = "com.google.accompanist:accompanist-insets", version.ref = "accompanistInsets" }
+annotationJvm = { group = "androidx.annotation", name = "annotation-jvm", version.ref = "annotationJvm" }
+appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
+composeActivity = { group = "androidx.activity", name = "activity-compose", version.ref = "activity" }
+composeBom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+composeCoil = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil" }
+composeFlowLayout = { group = "com.google.accompanist", name = "accompanist-flowlayout", version.ref = "flowLayout" }
+composeMaterial3 = { group = "androidx.compose.material3", name = "material3", version.ref = "material3" }
+composeNavigation = { group = "androidx.navigation", name = "navigation-compose", version.ref = "composeNavigation" }
+composeTooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+coroutinesCore = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
+gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
+hiltAndroid = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
+hiltCompiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "hilt" }
+hiltCore = { group = "com.google.dagger", name = "hilt-core", version.ref = "hilt" }
+hiltNavigationCompose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hiltNavigationCompose" }
+immutableCollections = { group = "org.jetbrains.kotlinx", name = "kotlinx-collections-immutable", version.ref = "immutableCollections" }
+lifecycleCompose = { group = "androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "lifecycle" }
+okhttp = { group = "com.squareup.okhttp3", name = "okhttp" }
+okhttpBom = { group = "com.squareup.okhttp3", name = "okhttp-bom", version.ref = "okhttpBom" }
+okhttpLoggingInterceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor" }
+retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+retrofitGsonConverter = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" }
+timber = { group = "com.jakewharton.timber", name = "timber", version.ref = "timber" }
+
+# Test
+testCoroutines = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutines" }
+testJunitJupiterApi = { group = "org.junit.jupiter", name = "junit-jupiter-api", version.ref = "junit5" }
+testJunitKotlin = { group = "org.jetbrains.kotlin", name = "kotlin-test-junit", version.ref = "kotlin" }
+testKluent = { group = "org.amshove.kluent", name = "kluent", version.ref = "kluent" }
+testMockk = { group = "io.mockk", name = "mockk", version.ref = "mockk" }
+testTurbine = { group = "app.cash.turbine", name = "turbine", version.ref = "turbine" }
+
+[bundles]
+
+testCore = [
+    "testMockk",
+    "testKluent",
+    "testTurbine",
+    "testCoroutines",
+    "testJunitKotlin",
+    "testJunitJupiterApi",
+]

@@ -1,0 +1,23 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        mavenCentral()
+        google()
+    }
+}
+
+
+rootProject.name = "flickr"
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+
+include ':library:coroutine'
+include ':library:arch'
+include ':library:ui'
+include ':data:network'
+include ':data:photosList'
+include ':data:common'
+include ':domain:photosList'
+include ':domain:model'
+include ':feature:photoDetail'
+include ':feature:photosList'
+include ':app'
